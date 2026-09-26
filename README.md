@@ -24,5 +24,4 @@ Run the generated agent:
 python market_research_analyst_agent.py
 ```
 
-## Corrections
-The agent's core logic worked perfectly on the first try. My only manual corrections were minor cleanups: I removed an unused `import sys` statement that the agent added at the top of the file, and I tweaked some of the `print()` statements (adding a few `\n` characters) to make the terminal output look cleaner and easier to read.
+
