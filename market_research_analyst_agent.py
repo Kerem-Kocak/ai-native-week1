@@ -15,6 +15,7 @@ market_research_analyst = Agent(
 )
 
 if __name__ == "__main__":
-    print(f"Agent 'Market Research Analyst' initialized successfully.")
+    print(f"\nAgent 'Market Research Analyst' initialized successfully.\n")
     print(f"Role: {market_research_analyst.role}")
-    print(f"Goal: {market_research_analyst.goal}")
+    print(f"Goal: {market_research_analyst.goal}\n")
+

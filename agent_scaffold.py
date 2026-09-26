@@ -5,7 +5,6 @@ Interactively prompts for agent details and generates a CrewAI-style agent setup
 """
 
 import re
-import sys
 from pathlib import Path
 
 
@@ -27,7 +26,7 @@ def prompt_non_empty(field_name: str, hint: str = "") -> str:
             print(f"[Error] {field_name} cannot be empty. Please enter a valid value.\n")
         except (KeyboardInterrupt, EOFError):
             print("\n\n[Cancelled] Operation aborted by user.")
-            sys.exit(0)
+            raise SystemExit(0)
 
 
 def sanitize_identifier(name: str) -> str:
@@ -66,9 +65,9 @@ from crewai import Agent
 )
 
 if __name__ == "__main__":
-    print(f"Agent '{name}' initialized successfully.")
+    print(f"\\nAgent '{name}' initialized successfully.\\n")
     print(f"Role: {{{var_name}.role}}")
-    print(f"Goal: {{{var_name}.goal}}")
+    print(f"Goal: {{{var_name}.goal}}\\n")
 '''
     return code
 
@@ -101,7 +100,7 @@ def main() -> None:
             break
         except (KeyboardInterrupt, EOFError):
             print("\n\n[Cancelled] Operation aborted by user.")
-            sys.exit(0)
+            raise SystemExit(0)
 
     output_path = Path(filename)
     code_content = generate_crewai_code(agent_name, role, goal, backstory)
@@ -117,7 +116,7 @@ def main() -> None:
         print("-" * 40)
     except OSError as err:
         print(f"\n[Error] Failed to write file '{output_path}': {err}")
-        sys.exit(1)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
