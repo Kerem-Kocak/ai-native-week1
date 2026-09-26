@@ -1,7 +1,8 @@
 # Week 1 - Setup Writeup
 
 **Which coding agent you set up and the version:**
-I set up Google Antigravity (backed by the free Gemini student plan) to utilize its full agentic capabilities.
+I used Google Antigravity(backed by the free Gemini student plan) to utilize its full agentic capabilities.
+**Note on Environment:** Although my system's global Python version (3.13.0) is visible in the terminal screenshot, I have already set up an isolated Python 3.12 environment for this course to ensure full compatibility with future AI libraries as instructed.
 
 **A screenshot of your agent completing a task:**
 <img width="1917" height="1137" alt="image" src="https://github.com/user-attachments/assets/87ce1475-f9f3-4b06-998e-dd4696c4e018" />
